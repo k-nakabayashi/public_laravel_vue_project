@@ -1,0 +1,89 @@
+.c-modal-Form  {
+  width: 80vw;
+  max-width: 450px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  
+  > * {
+    background: $v_white;
+    border-radius: 30px;
+  }
+  .cancel {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    &:before {
+      font-size: 24px;
+    }
+  }
+  dl {
+    text-align: center;
+  }
+  dt {
+    display: block;
+  }
+
+  Form {
+    input {
+      border: none;
+      border-bottom: solid 1px $v_black2;
+    }
+    .Agree {
+      cursor: pointer;
+    }
+    .Agree > span {
+      position: relative;
+      &:before {
+        position: absolute;
+        content: "";
+        width: 16px;
+        height: 16px;
+        top: 0;
+        bottom: 0;
+        left: -32px;
+        margin-top: auto;
+        margin-bottom: auto;
+        border: 1px solid #808495;
+        border-radius: 4px;
+      }
+    }
+    .Agree__input {
+      display: none;
+    }
+    .Agree__input:checked + span:after {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 8px;
+      top: -8px;
+      bottom: 0;
+      left: -32px;
+      margin-top: auto;
+      margin-bottom: auto;
+      border-left: 3px solid $v_key_pink;
+      border-bottom: 3px solid $v_key_pink;
+      transform: rotate(-45deg);
+
+    }
+
+  }
+
+  .Form__name {
+    input {
+      width: 100%;
+      margin-left: -30px;
+    }
+  }
+}
+.c-modal-Form__links {
+ 
+  span {
+    cursor: pointer;
+    padding-bottom: 4px;
+    border-bottom: solid 1px $v_black;
+  }
+}

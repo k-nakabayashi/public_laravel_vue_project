@@ -1,0 +1,25 @@
+<div>
+<?php
+
+	if ( isset( $_GET['oauth_token'] ) || isset($_GET["oauth_verifier"]) ) {
+			echo '<p>下記の認証情報を取得しました。(<a href="'.explode( "?", $_SERVER["REQUEST_URI"] )[0].'">もう1回やってみる</a>)</p>';
+
+			foreach ( $query as $key => $value ) {
+					echo "<b>".$key."</b>: ".$value."<BR>";
+			}
+	} elseif ( isset( $_GET["denied"] ) ) {
+			// エラーメッセージを出力して終了
+			echo "連携を拒否しました。";
+			return;
+	} else {
+			if( !$response ) {
+					echo "<p>リクエストトークンを取得できませんでした…。$api_keyと$callback_url、そしてTwitterのアプリケーションに設定しているCallback URLを確認して下さい。</p>";
+					return;
+			}
+	}
+?>
+	</div>
+
+  <script>
+window.query_auth_for_tw_api = JSON.parse(`<?php echo $query_for_js; ?>`);
+</script>

@@ -1,0 +1,38 @@
+body {
+  font-family: "Hiragino Kaku Gothic ProN";
+  background: $v_base_white;
+
+  * {
+    color: $v_black;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  
+}
+
+.f-txt-1 {
+  font-size: 32px;
+}
+
+.f-txt-2 {
+  font-size: 28px;
+}
+
+.f-txt-3 {
+  font-size: 24px;
+}
+
+.f-txt-4 {
+  font-size: 20px;
+}

@@ -1,0 +1,67 @@
+%a-Area {
+  display: inline-block!important;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #00000029;
+  text-align: center;
+}
+%a-Area__inner {
+  display: inline-block!important;
+  text-align: center;
+}
+
+.a-Btn--large {
+  @extend %a-Area;
+
+  cursor: pointer;
+  background: $v_key_pink;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 200px;
+
+  > * {
+    @extend %a-Area__inner;
+    color: $v_white;
+    font-size: 24px;
+  }
+}
+
+
+.a-Btn--pink {
+  @extend %a-Area;
+  cursor: pointer;
+
+  background: $v_key_pink;
+  padding: 8px 16px;
+  // width: 120px;
+
+  > * {
+    @extend %a-Area__inner;
+
+    color: $v_white;
+    font-size: 16px;
+  }
+}
+
+.a-Btn--grey {
+  @extend %a-Area;
+  cursor: pointer;
+
+  background: #F1F1F1 0% 0% no-repeat padding-box;
+  padding: 8px 16px;
+  // width: 120px;
+
+  > * {
+    @extend %a-Area__inner;
+    font-size: 16px;
+  }
+}
+
+.a-Chip {
+  @extend %a-Area;
+  background: #F1F1F1 0% 0% no-repeat padding-box;
+  box-shadow: none;
+  padding: 4px 12px;
+  > * {
+    @extend %a-Area__inner;
+  }
+}

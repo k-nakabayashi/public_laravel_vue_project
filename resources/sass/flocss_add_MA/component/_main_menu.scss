@@ -1,0 +1,29 @@
+.c-Main-Menus {
+  background: $v_main_blue;
+  // min-width: 180px;
+  height: 100vh;
+}
+.c-Main-Menus__element {
+  cursor: pointer;
+  padding: 24px 16px 24px 40px;
+  background: $v_main_blue;
+  transition: background 1s;
+  p {
+    padding-left: 16px;
+    color: $v_white;
+    transition: color 0.5s;
+    border-left: none;
+  }
+
+  &:hover {
+    background: $v_white;
+
+    transition: background 1s;
+    p {
+      color: $v_main_blue;
+      transition: color 0.5s;
+      position: relative;
+    }
+
+  }
+}
